@@ -31,8 +31,16 @@
       background-color: aliceblue;
       display: grid;
       text-align: center;
+      color: blue;
    
    }
    button {
 margin: 10px;
    }
+   .nomer {
+color: darkgreen;
+font-size: 20px;
+
+   }
+
+
