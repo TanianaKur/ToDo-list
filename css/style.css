@@ -1,46 +1,64 @@
 *,
 *:before,
 *:after {
-	padding: 0;
-	margin: 0;
-	border: 0;
-	box-sizing: border-box;}
-   body {
-      height: 100%;
-      background-color: lightseagreen;
-      font-family:Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      color: red;
-   }
-   h1 {
-      margin:0px 0 30px 30px;
-      line-height: 150%;
-   }
-   .search {
-      margin: 20px;
-      height: 40px;
-      width: 200px;
-   }
-   .block-for-list {
-      margin: 0px auto;
-      margin-bottom: 100px;
-      padding: 15px;
-      font-size: 16px;
-      width: 500px;
-      height: 500px;
-      background-color: aliceblue;
-      display: grid;
-      text-align: center;
-      color: blue;
-   
-   }
-   button {
-margin: 10px;
-   }
-   .nomer {
-color: darkgreen;
-font-size: 20px;
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+}
 
-   }
+body {
+   height: 100%;
+   background-color: lightseagreen;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 16px;
+   color: red;
+}
 
+h1 {
+   margin: 0px 0 30px 30px;
+   line-height: 150%;
+}
 
+.search {
+   margin: 20px;
+   height: 40px;
+   width: 200px;
+}
+
+.block-for-list {
+   margin: 0px auto;
+   margin-bottom: 100px;
+   padding: 15px;
+   font-size: 16px;
+   width: 500px;
+   height: 500px;
+   background-color: rgb(18, 87, 148);
+   display: grid;
+   text-align: center;
+   color: blue;
+
+}
+
+button {
+   margin: 10px;
+}
+
+.nomer {
+   color: darkgreen;
+   font-size: 20px;
+
+}
+
+.title {
+   border-radius: 2px;
+   border: 2px;
+   color: #000;
+   margin: 10px;
+}
+.inputClass
+{
+   margin: 10px;
+   border: 2px solid red;
+   height: 16px;
+}

@@ -33,4 +33,17 @@ tasks.forEach(function (task) {
    taskElement.appendChild(descriptionElement);
    taskElement.appendChild(finishElement);
    out_arr.appendChild(taskElement);
+
 });
+
+const blockForList = document.getElementById("tasks_form");
+const inputElementTitle = document.createElement('input');
+
+blockForList.appendChild(inputElementTitle);
+inputElementTitle.className = 'inputClass';
+const inputElementDescription = document.createElement('input');
+inputElementDescription.className = 'inputClass';
+blockForList.appendChild(inputElementDescription);
+const saveButton = document.createElement('button');
+saveButton.innerHTML = 'Добавить';
+blockForList.appendChild(saveButton);
