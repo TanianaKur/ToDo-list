@@ -36,14 +36,26 @@ tasks.forEach(function (task) {
 
 });
 
-const blockForList = document.getElementById("tasks_form");
-const inputElementTitle = document.createElement('input');
 
-blockForList.appendChild(inputElementTitle);
-inputElementTitle.className = 'inputClass';
-const inputElementDescription = document.createElement('input');
-inputElementDescription.className = 'inputClass';
-blockForList.appendChild(inputElementDescription);
-const saveButton = document.createElement('button');
-saveButton.innerHTML = 'Добавить';
-blockForList.appendChild(saveButton);
+const buttonAdd = document.querySelector('.adding-input');
+function showForm() {
+   const blockForList = document.getElementById("tasks_form");
+   const inputElementTitle = document.createElement('input');
+
+   blockForList.appendChild(inputElementTitle);
+   inputElementTitle.className = 'inputClass';
+   const inputElementDescription = document.createElement('input');
+   inputElementDescription.className = 'inputClass';
+   blockForList.appendChild(inputElementDescription);
+   const saveButton = document.createElement('button');
+   saveButton.innerHTML = 'Добавить';
+   blockForList.appendChild(saveButton);
+};
+buttonAdd.onclick = showForm;
+// TODO Домашнее задание:
+// * Добавить стили.
+// * Добавить появление инпутов и кнопки при нажатии кнопки "+"
+// * Добавить создание задачи
+// ** Подумать, как генерировать номер для новой задачи
+// ** Подумать, как добавлять новые задачи и вывод их на форму
+// ** Подумать, как реализовать исчезновение инпутов и кнопки при нажатии на кнопку "Добавить"
