@@ -51,22 +51,36 @@ function showForm() {
 
    saveButton.onclick = addTask
 };
-
 function addTask() {
    const titleInput = document.getElementById("title_id");
    const description = document.getElementById("description_id");
+   let nomerToo = generateNumber();
    let adding = {
-      nomer: 1,
+
+      nomer: nomerToo,
       title: titleInput.value,
       description: description.value,
       finish: 'да',
    }
+
    tasks.push(adding);
 
    renderTasks();
 };
 
 buttonAdd.onclick = showForm;
+function generateNumber() {
+   if (tasks.length == 0) {
+      return 1
+   }
+   tasks[tasks.length - 1].nomer;
+   return tasks[tasks.length - 1].nomer + 1
+};
+
+
+
+
+
 
 
 
@@ -76,7 +90,4 @@ buttonAdd.onclick = showForm;
 
 
 // TODO Домашнее задание:
-// * Добавить создание задачи
-// ** Подумать, как генерировать номер для новой задачи
-// ** Подумать, как добавлять новые задачи и вывод их на форму
 // ** Подумать, как реализовать исчезновение инпутов и кнопки при нажатии на кнопку "Добавить"
