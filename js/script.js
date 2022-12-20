@@ -19,12 +19,20 @@ function renderTasks() {
       const descriptionElement = document.createElement('p');
       descriptionElement.innerHTML = task.description;
       const finishElement = document.createElement('p');
+
       finishElement.innerHTML = task.finish;
+      const delBut = document.createElement('input');
+      delBut.type = 'image';
+      delBut.src = 'img/icons8-крестик-48.png'
+      delBut.id = 'del_but_id';
+      delBut.onclick = function () { deleteTask(task.nomer); }
+
       taskElement.appendChild(nomerElement);
       taskElement.appendChild(titleElement);
       taskElement.appendChild(descriptionElement);
       taskElement.appendChild(finishElement);
       out_arr.appendChild(taskElement);
+      taskElement.appendChild(delBut);
    });
 };
 renderTasks();
@@ -65,6 +73,7 @@ function addTask() {
    renderTasks();
    inpbut_id.innerHTML = '';
 
+
 };
 
 buttonAdd.onclick = showForm;
@@ -75,10 +84,11 @@ function generateNumber() {
    tasks[tasks.length - 1].nomer;
    return tasks[tasks.length - 1].nomer + 1
 };
-
-
-
-
+function deleteTask(nomer) {
+   tasks = tasks.filter(person => person.nomer != nomer);
+   console.log(tasks)
+   renderTasks();
+};
 
 
 
