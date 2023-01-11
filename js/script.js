@@ -26,6 +26,9 @@ function renderTasks() {
       delBut.src = 'img/icons8-крестик-48.png'
       delBut.id = 'del_but_id';
       delBut.onclick = function () { deleteTask(task.nomer); }
+      const updateButton = document.createElement('input');
+      updateButton.type = 'image';
+      updateButton.src = 'img/icons8-кисточка-для-рисования-48.png';
 
       taskElement.appendChild(nomerElement);
       taskElement.appendChild(titleElement);
@@ -33,6 +36,7 @@ function renderTasks() {
       taskElement.appendChild(finishElement);
       out_arr.appendChild(taskElement);
       taskElement.appendChild(delBut);
+      taskElement.appendChild(updateButton);
    });
 };
 renderTasks();
@@ -86,7 +90,6 @@ function generateNumber() {
 };
 function deleteTask(nomer) {
    tasks = tasks.filter(person => person.nomer != nomer);
-   console.log(tasks)
    renderTasks();
 };
 
