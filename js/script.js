@@ -3,6 +3,7 @@ let tasks = [
 
 
 ];
+let isPlusDisabled = false;
 
 function renderTasks() {
    let out_arr = document.getElementById('out_arr');
@@ -42,7 +43,10 @@ function renderTasks() {
 renderTasks();
 
 const buttonAdd = document.querySelector('.adding-input');
-function showForm() {
+function renderPlusComponents() {
+   if (isPlusDisabled) {
+      return;
+   }
    const blockForList = document.getElementById("tasks_form");
    const inputElementTitle = document.createElement('input');
    blockForList.appendChild(inpbut_id);
@@ -60,7 +64,7 @@ function showForm() {
    inpbut_id.appendChild(saveButton);
    const buttonAddTask = document.querySelector('.buttonClassAdd');
    saveButton.onclick = addTask;
-
+   isPlusDisabled = true;
 };
 function addTask() {
    const titleInput = document.getElementById("title_id");
@@ -76,11 +80,11 @@ function addTask() {
    tasks.push(adding);
    renderTasks();
    inpbut_id.innerHTML = '';
-
+   isPlusDisabled = false;
 
 };
 
-buttonAdd.onclick = showForm;
+buttonAdd.onclick = renderPlusComponents;
 function generateNumber() {
    if (tasks.length == 0) {
       return 1
@@ -100,4 +104,6 @@ function deleteTask(nomer) {
 
 
 
+
 // TODO Домашнее задание:
+// почитать про сравнения
