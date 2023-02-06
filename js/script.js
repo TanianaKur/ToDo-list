@@ -11,23 +11,28 @@ function renderTasks() {
 
    tasks.forEach(function (task) {
       const taskElement = document.createElement('div');
-
+      taskElement.className = 'div_task';
       const nomerElement = document.createElement('p');
+      nomerElement.className = 'p_nomer';
       nomerElement.innerHTML = task.nomer;
 
       const titleElement = document.createElement('p');
+      titleElement.className = 'p_title';
       titleElement.innerHTML = task.title;
       const descriptionElement = document.createElement('p');
+      descriptionElement.className = 'p_description';
       descriptionElement.innerHTML = task.description;
       const finishElement = document.createElement('p');
-
+      finishElement.className = 'p_finish';
       finishElement.innerHTML = task.finish;
       const delBut = document.createElement('input');
+      delBut.className = 'input_del';
       delBut.type = 'image';
       delBut.src = 'img/icons8-крестик-48.png'
       delBut.id = 'del_but_id';
       delBut.onclick = function () { deleteTask(task.nomer); }
       const updateButton = document.createElement('input');
+      updateButton.className = 'input_tassel';
       updateButton.type = 'image';
       updateButton.src = 'img/icons8-кисточка-для-рисования-48.png';
 
